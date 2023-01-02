@@ -48,3 +48,15 @@ class Rectangle:
             return 0
         perimeter = (2 * self.__width) + (2 * self.__height)
         return perimeter
+
+    def __str__(self):
+        """prints the rectangle with #"""
+        result = ""
+
+        if self.__height == 0 or self.__width == 0:
+            return result
+        for i in range(0, self.__height):
+            result += "{:s}".format(self.__width * "#")
+            if i + 1 is not self.__height:
+                result += "\n"
+        return result
